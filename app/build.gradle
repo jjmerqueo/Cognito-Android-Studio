@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 26
@@ -37,9 +38,13 @@ dependencies {
 
     // Social Media
     implementation 'com.shaishavgandhi:login-buttons:1.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     //implementation('com.amazonaws:aws-android-sdk-mobile-client:2.7.+@aar') { transitive = true }
     // Allow using mobile app
     //implementation('com.amazonaws:aws-android-sdk-auth-google:2.7.0@aar') { transitive = true }
     // Allow login with Google account
+}
+repositories {
+    mavenCentral()
 }
